@@ -12,7 +12,7 @@ import { readingTimeRemarkPlugin, responsiveTablesRehypePlugin } from './src/uti
 import { ANALYTICS, SITE } from './src/utils/config.ts';
 import solidJs from "@astrojs/solid-js";
 import auth from "auth-astro";
-import vercel from "@astrojs/vercel/serverless";
+//import vercel from "@astrojs/vercel/serverless";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const whenExternalScripts = (items = []) => ANALYTICS.vendors.googleAnalytics.id && ANALYTICS.vendors.googleAnalytics.partytown ? Array.isArray(items) ? items.map(item => item()) : [items()] : [];
 
@@ -60,5 +60,5 @@ export default defineConfig({
       }
     }
   },
-  adapter: vercel(),
+  //adapter: vercel(),
 });
